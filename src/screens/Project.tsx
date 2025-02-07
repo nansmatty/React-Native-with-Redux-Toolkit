@@ -1,12 +1,13 @@
 import {StyleSheet, Text, View} from 'react-native';
+import React from 'react';
 
-function App(): React.JSX.Element {
+const Projects: React.FC = () => {
   return (
     <View style={styles.sectionContainer}>
-      <Text style={styles.sectionTitle}>Hello World</Text>
+      <Text style={styles.sectionTitle}>Projects</Text>
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   sectionContainer: {
@@ -20,4 +21,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default Projects;
