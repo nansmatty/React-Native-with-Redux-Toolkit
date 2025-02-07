@@ -1,23 +1,16 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import RootNavigator from './src/navigation/RootNavigator';
+import {Provider} from 'react-redux';
+import {store} from './src/store/store';
 
 function App(): React.JSX.Element {
   return (
-    <View style={styles.sectionContainer}>
-      <Text style={styles.sectionTitle}>Hello World</Text>
-    </View>
+    <Provider store={store}>
+      <NavigationContainer>
+        <RootNavigator />
+      </NavigationContainer>
+    </Provider>
   );
 }
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    padding: 15,
-    minHeight: '100%',
-  },
-  sectionTitle: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-});
 
 export default App;
